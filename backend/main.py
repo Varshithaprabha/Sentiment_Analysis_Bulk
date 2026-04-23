@@ -15,11 +15,11 @@ app = FastAPI(
     redoc_url="/redoc"
 )
 
-# CORS — allows the frontend (localhost:3000 or any origin in dev) to call this API
+# CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],        # In production: ["https://youruniversity.edu"]
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
