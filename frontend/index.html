@@ -678,10 +678,10 @@ e.g. 'The professor explains concepts clearly and is always available for help.'
               format.</p>
           </div>
           <div style="display:flex;gap:12px;">
-            <a href="http://localhost:8000/api/v1/reports/export" target="_blank">
+            <a id="excelDownload" target="_blank">
               <button class="btn btn-outline" style="font-size:12px;padding:6px 20px;">⬇ Download Excel</button>
             </a>
-            <a href="http://localhost:8000/api/v1/reports/export/csv" target="_blank">
+            <a id="csvDownload" target="_blank">
               <button class="btn btn-outline" style="font-size:12px;padding:6px 20px;">📄 Download CSV</button>
             </a>
           </div>
@@ -734,6 +734,10 @@ e.g. 'The professor explains concepts clearly and is always available for help.'
         badge.style.background = 'rgba(76, 175, 80, 0.3)';
         badge.style.borderColor = '#4caf50';
         document.getElementById('engineBadge').textContent = d.analyzer.toUpperCase();
+        
+        // Update export links
+        document.getElementById('excelDownload').href = `${API}/api/v1/reports/export`;
+        document.getElementById('csvDownload').href = `${API}/api/v1/reports/export/csv`;
       } catch {
         badge.innerHTML = `API: OFFLINE`;
         badge.style.color = '#ff5252';
