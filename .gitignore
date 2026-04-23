@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+backend/venv/
+backend/__pycache__/
+backend/app/api/__pycache__/
+backend/app/core/__pycache__/
+backend/app/models/__pycache__/
+backend/app/services/__pycache__/
+*.xlsx
+*.csv
+!data/samples/*.csv
