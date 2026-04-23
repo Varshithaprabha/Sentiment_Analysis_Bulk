@@ -346,7 +346,10 @@ e.g. 'The professor explains concepts clearly and is always available for help.'
 </main>
 
 <script>
-const API = 'http://localhost:8000';
+// ── INIT ──────────────────────────────────────────────────────────────────────
+const API = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? 'http://localhost:8000'
+  : 'https://sentiment-analysis-api-varshitha.onrender.com'; // Placeholder for your future deployment URL
 let donutChart = null, catChart = null;
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
